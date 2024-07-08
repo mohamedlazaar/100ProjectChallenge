@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 800px;
+    height: 500px;
+    background-color: #111111;
+    position: relative;
+    
+}
+.clip{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+.one{
+    background: url(assets/mt-1697_home_category-1.png);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
+}
+.two{
+    background: url(assets/mt-1697_home_category-2.png);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+}
+.three{
+    background: url(assets/mt-1697_home_category-3.png);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
