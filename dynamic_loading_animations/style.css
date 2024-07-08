@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation_body{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: auto;
+}
+.loading{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: loading .8s ease infinite;
+}
+
+.one{
+    animation-delay: .3s;
+}
+.two{
+    animation-delay: .4s;
+}
+.three{
+    animation-delay: .5s;
+}
+@keyframes loading{
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+    }
+}
