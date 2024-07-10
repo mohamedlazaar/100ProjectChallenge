@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(127, 232, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap: 10px;
+    list-style: none;
+}
+
+label {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: crimson;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container li input {
+    display: none;
+}
+
+.container li p {
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.container li input:checked ~ p {
+    max-height: 300px;
+    padding: 10px;
+    border-top: 0;
+}
+
+.container li label::after {
+    content: "+";
+    width: 20px;
+    height: 20px;
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: all .1s ease-in-out;
+}
+
+.container li input:checked + label::after {
+    content: "-";
+}
