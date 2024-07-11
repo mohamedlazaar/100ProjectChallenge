@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Payment Form Using Html Css</title>
+</head>
+<body>
+    <form class="form">
+        <div class="payment_options">
+           <button name="paypal" type="button">
+            <img src="images/paypal-seeklogo.com.svg" alt="paypal">
+           </button>
+           <button name="app-pay" type="button">
+            <img src="images/Apple_Pay-Logo.wine.svg" alt="apple-pay">
+           </button>
+           <button name="google-pay" type="button">
+            <img src="images/google-pay-seeklogo.com.svg" alt="google-pay">
+          </button>
+        </div>
+        <div class="seperator">
+            <hr class="line">
+            <p>or pay using credit card</p>
+            <hr class="line">
+        </div>
+        <div class="credit_cart_details">
+            <div class="input_container">
+            <label for="full_card_holder_name" class="input_label">
+                Card holder full name
+            </label>
+            <input type="text" name="input-name" id="full_card_holder_name" class="input_field" title="input title" placeholder="Enter your full name">
+        </div>
+
+            <div class="input_container">
+            <label for="full_card_holder_number" class="input_label">
+                Card Number
+            </label>
+            <input type="text" name="input-name" id="full_card_holder_number" class="input_field" title="input title" placeholder="0000 0000 0000 0000">
+        </div>
+
+            <div class="input_container">
+            <label for="full_card_holder_Expiry" class="input_label">
+                Expiry Date/ CVV
+            </label>
+            <div class="expiry-date">
+            <input type="text" name="input-name" id="full_card_holder_Expiry" title="Expiry Date" class="input_field first" placeholder="01/23">
+            <input type="number" name="CVV" id="password_field" class="input_field" title="CVV" placeholder="CVV">
+        </div>
+        </div>
+        </div>
+        <button class="purchase-btn">Checkout</button>
+    </form>
+</body>
+</html>
