@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #ff4444;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012c4b;
+}
+/* heart gray */
+.heart-gray{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    transform: rotate(-45deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart-gray::before, 
+.heart-gray::after{
+    content: "";
+    background-color: #ccc;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.heart-gray::before{
+    top: -50%;
+    left: 0;
+}
+.heart-gray::after{
+    top: 0;
+    left: 50%;
+}
+/* heart red */
+.heart-red{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-color);
+    transform: rotate(-45deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.heart-red::before, 
+.heart-red::after{
+    content: "";
+    background-color: var(--primary-color);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.heart-red::before{
+    top: -50%;
+    left: 0;
+}
+.heart-red::after{
+    top: 0;
+    left: 50%
+}
+.heart-red.animation{
+    animation: pop 1s ease-in-out ;
+    visibility: visible;
+}
+.heart-red.fill-color{
+    background-color: var(--primary-color)
+}
+/* heart animation */
+@keyframes pop {
+    100%{
+        transform: scale(1.7) rotate(-45deg);
+        opacity: 0;
+    }
+}
