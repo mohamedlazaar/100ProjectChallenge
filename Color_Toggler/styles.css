@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+}
+.switch-input{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.switch{
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.switch::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.switch-input:checked + .switch::after{
+    background-color: #000;
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+.switch-input:checked + .switch{
+    background-color: #fff;
+}
+.switch-input:checked + .switch::after{
+    background-color: #000;
+}
+.switch:active:active{
+    width: 60px;
+}
