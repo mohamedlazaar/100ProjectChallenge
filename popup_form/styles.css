@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+}
+body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #18181870;
+    z-index: -1;
+}
+.container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.container h1{
+    font-size: 40px;
+}
+.container p{
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 20px;
+}
+.form_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008f;
+    color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.form_container.show{
+    display: flex;
+}
+.form_{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    gap: 20px
+}
+.form_container form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid;
+}
+button{
+    padding: 10px;
+    border: 1px solid gray;
+    background: crimson;
+    outline: none;
+    border-radius: 40px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+button:hover{
+    background: #f05555;
+}
+#signup{
+    padding: 10px 30px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.form_header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
